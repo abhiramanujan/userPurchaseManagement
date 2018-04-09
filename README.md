@@ -1,2 +1,2 @@
 # userPurchaseManagement
-A website that helps in user wallet in buying products
+A website that helps in managing user wallet in buying products
