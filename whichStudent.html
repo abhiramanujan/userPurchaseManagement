@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<style>
+	input[type=text]
+	{
+		width: 50%;
+		border: none;
+		border-bottom: 2px solid red;
+		font-size: 30px;
+		width: 50%;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+	}
+	.welcome
+ {
+	 color: maroon;
+	 margin-left: 40px;
+	 text-align: center;
+ }
+ input[type=submit]
+ {
+	 background-color: #4CAF50; /* Green */
+	 border: none;
+	 color: solid red;
+	 padding: 15px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+	 font-size: 16px;
+	 width: 50%;
+	 margin-left:auto;
+	 margin-right:auto;
+	 display: block;
+	 border-style: solid;
+ }
+ a
+ {
+	 background-color: #00BFFF; /* Green */
+	 border: none;
+	 color: white;
+	 padding: 15px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+	 font-size: 16px;
+	 width: 50%;
+	 margin-left:auto;
+	 margin-right:auto;
+	 display: block;
+	 border-style: solid;
+ }
+
+ body
+		{
+			background-image: url("/Users/apple/Desktop/dbms_min/templates/101.jpg");
+
+		}
+ </style>
+</head>
+<body>
+	<h1 class="welcome">Which product?</h1>
+	<form action="/enterStudent" method="POST">
+		<input type="text" name="email" placeholder="email">
+		<input type="submit" name="Submit">
+		</br>
+		</br>
+		</br>
+	</form>
+	</br>
+
+	<a href="{{ url_for('dispData') }}">Display Data</a>
+</br>
+	<a href="{{ url_for('enterData')}}">Enter more data</a>
+	</br>
+		<a href="{{ url_for('login')}}">Logout</a>
+
+</body>
+</html>

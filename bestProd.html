@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	table
+	{
+    border-collapse: collapse;
+    width: 100%;
+	}
+
+	th, td
+	{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+	}
+	input[type=text]
+	{
+		width: 50%;
+		border: none;
+	   	border-bottom: 2px solid red;
+		font-size: 30px;
+		width: 50%;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+	}	
+	a
+  {
+ 	 background-color: #00BFFF; /* Green */
+ 	 border: none;
+ 	 color: white;
+ 	 padding: 15px 32px;
+ 	 text-align: center;
+ 	 text-decoration: none;
+ 	 display: inline-block;
+ 	 font-size: 16px;
+ 	 width: 50%;
+ 	 margin-left:auto;
+ 	 margin-right:auto;
+ 	 display: block;
+ 	 border-style: solid;
+  }
+	.welcome
+ {
+	 color: maroon;
+	 margin-left: 40px;
+	 text-align: center;
+ }
+
+	input[type=submit]
+{
+		background-color: #4CAF50; /* Green */
+		border: none;
+		color: solid red;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		width: 50%;
+		margin-left:auto;
+		margin-right:auto;
+		display: block;
+}
+
+label
+			{
+				color: maroon;
+	 			text-align: center;
+				width: 600%;
+				border: none;
+				font-size: 32px;
+				width: 700%;
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+
+
+body
+		{
+			background-image: url("/Users/apple/Desktop/dbms_min/templates/101.jpg");
+
+		}		
+</style>
+</head>
+<body>
+	<form action="/bestProd" method="post">
+			<label for="fname">Enter PRODUCT ID for best offers</label><br>
+			<input type="text" name="prod_id" placeholder="product ID"><br>
+			<input type="submit" name="Submit">
+	</form>
+	<h2 class="welcome">Best prices for the products you bought</h2>
+	<table border="2">
+	    <tr>
+	    	<td>Shop id</td>
+	    	<td>Product id</td>
+	    	<td>Prices</td>
+	    	<td>Weight in gms</td>
+	    	
+	    	
+	    </tr>
+	    {% for row in data %}
+	        <tr>
+	        {% for d in row %}
+	            <td>{{ d }}</td>
+	        {% endfor %}
+	        </tr>
+	    {% endfor %}
+	</table>
+	<a href="{{ url_for('whichStudent') }}">Display Data</a>
+	</br>
+	</br>
+	<a href="{{ url_for('enterData')}}">Enter more data</a>
+	</br>
+	<a href="{{ url_for('whichStudent') }}">Back</a>
+	</br>
+	<a href="{{ url_for('login')}}">Logout</a>
+
+</body>
+</html>

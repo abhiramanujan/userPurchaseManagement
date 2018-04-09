@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}}</title>
+		<style>
+			body
+			{
+				background-color: linen;
+			}
+			.heading
+			{
+				color: maroon;
+				margin-left: 40px;
+				text-align: center;
+				border-style: solid;
+    		border-width: medium;
+			}
+			.welcome
+	 	 {
+	 		 color: maroon;
+	 		 margin-left: 40px;
+	 		 text-align: center;
+	 	 }
+			input[type=text]
+			{
+				width: 50%;
+				border: none;
+	    	border-bottom: 2px solid red;
+				font-size: 30px;
+				width: 50%;
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+			input[type=password]
+			{
+				width: 50%;
+				border: none;
+	    	border-bottom: 2px solid red;
+				font-size: 30px;
+				width: 50%;
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+			label
+			{
+				width: 50%;
+				border: none;
+				font-size: 30px;
+				width: 50%;
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+			input[type=submit]
+			{
+				background-color: #4CAF50; /* Green */
+				border: none;
+				color: solid red;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				width: 50%;
+				margin-left:auto;
+				margin-right:auto;
+				display: block;
+			}
+			p
+			{
+				width: 50%;
+				border: none;
+				font-size: 30px;
+				width: 50%;
+				margin-left:auto;
+				margin-right:auto;
+				display:block;
+			}
+
+		body
+		{
+			background-image: url("/Users/apple/Desktop/dbms_min/templates/101.jpg");
+
+		}
+		</style>
+	</head>
+
+	<body>
+		<h1 class="welcome">{{title}}</h1>
+		<form action="/signUp" method="post">
+			<label for="fname">Email</label><br>
+			<input type="text" name="email" placeholder="email"><br>
+			<label for="fname">Name</label><br>
+			<input type="text" name="name" placeholder="Name"><br>
+			<label for="fname">Password</label><br>
+			<input type="password" name="password" placeholder="Password"><br>
+			</br>
+			<input type="submit" name="Submit">
+		</form>
+
+		<p>  </p>
+	</body>
+</html>

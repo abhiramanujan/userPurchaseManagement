@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<style>
+	input[type=text]
+	{
+		width: 50%;
+		border: none;
+		border-bottom: 2px solid red;
+		font-size: 30px;
+		width: 50%;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+	}
+	input[type=password]
+	{
+		width: 50%;
+		border: none;
+		border-bottom: 2px solid red;
+		font-size: 30px;
+		width: 50%;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+	}
+	input[type=submit]
+	{
+		background-color: #4CAF50; /* Green */
+		border: none;
+		color: solid red;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		width: 50%;
+		margin-left:auto;
+		margin-right:auto;
+		display: block;
+		border-style: solid;
+	}
+	.welcome
+ {
+	 color: maroon;
+	 margin-left: 40px;
+	 text-align: center;
+ }
+ p
+ {
+	 width: 50%;
+	 border: none;
+	 font-size: 30px;
+	 width: 50%;
+	 margin-left:auto;
+	 margin-right:auto;
+	 display:block;
+ }
+
+ a
+ {
+	 background-color: #4CAF50; /* Green */
+	 border: none;
+	 color: white;
+	 padding: 15px 32px;
+	 text-align: center;
+	 text-decoration: none;
+	 display: inline-block;
+	 font-size: 16px;
+	 width: 50%;
+	 margin-left:auto;
+	 margin-right:auto;
+	 display: block;
+	 border-style: solid;
+ }
+
+ body
+		{
+			background-image: url("/Users/apple/Desktop/dbms_min/templates/101.jpg");
+
+		}
+	</style>
+</head>
+<body>
+	<h1 class="welcome">LOGIN</h1>
+	<form action="/checkUser" method="post">
+		<input type="text" name="email" placeholder="email">
+		<input type="password" name="password" placeholder="password">
+		<input type="submit" name="Submit">
+	</form>
+	</br>
+	<p>Please recheck the data you've entered</p>
+	<a href="{{ url_for('register')}}">Sign Up</a>
+</body>
+</html>

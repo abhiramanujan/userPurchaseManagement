@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+	table
+	{
+    border-collapse: collapse;
+    width: 100%;
+	}
+
+	th, td
+	{
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+	}
+	a
+  {
+ 	 background-color: #00BFFF; /* Green */
+ 	 border: none;
+ 	 color: white;
+ 	 padding: 15px 32px;
+ 	 text-align: center;
+ 	 text-decoration: none;
+ 	 display: inline-block;
+ 	 font-size: 16px;
+ 	 width: 50%;
+ 	 margin-left:auto;
+ 	 margin-right:auto;
+ 	 display: block;
+ 	 border-style: solid;
+  }
+	.welcome
+ {
+	 color: maroon;
+	 margin-left: 40px;
+	 text-align: center;
+ }
+ body
+		{
+			background-image: url("/Users/apple/Desktop/dbms_min/templates/101.jpg");
+
+		}
+</style>
+</head>
+<body>
+	<h1 class="welcome">Your Individual Total Expense</h1>
+	<table border="2">
+	    <tr>
+	    	<td>email</td>
+	    	<td>Expense till date</td>
+	    	
+	    	
+	    </tr>
+	    {% for row in data %}
+	        <tr>
+	        {% for d in row %}
+	            <td>{{ d }}</td>
+	        {% endfor %}
+	        </tr>
+	    {% endfor %}
+	</table>
+	<a href="{{ url_for('whichStudent') }}">Display Data</a>
+	</br>
+	<a href="{{ url_for('enterData')}}">Enter more data</a>
+	</br>
+	</br>
+	<a href="{{ url_for('whichStudent') }}">Back</a>
+	<a href="{{ url_for('login')}}">Logout</a>
+
+</body>
+</html>

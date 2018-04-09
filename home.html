@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body
+		{
+			background-image: url("/Users/apple/Desktop/dbms_min/templates/101.jpg");
+
+		}
+		.heading
+		{
+			color: #FA8072;
+			margin-left: 40px;
+			text-align: center;
+			border-style: solid;
+    	border-width: medium;
+		}
+	 a
+	 {
+		background-color: #00BFFF; /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+		width: 50%;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		margin-bottom:0%;
+		border-style: solid;
+		border-width: medium;
+
+	 }
+	 .welcome
+	 {
+		 color: #E0FFFF;
+		 margin-left: 40px;
+		 text-align: center;
+	 }
+
+	</style>
+	<title>{{title}}</title>
+</head>
+<body>
+	<h1 class="heading">Family purchase tracker</h1>
+	<h1 class="welcome">Family purchase tracker</h1>
+	</br>
+	</br>
+	<a href="{{ url_for('register')}}">Sign Up</a>
+	</br>
+	<a href="{{ url_for('login')}}">Login</a>
+</body>
+</html>
